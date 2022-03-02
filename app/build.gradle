@@ -28,16 +28,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
     buildFeatures {
         compose true
     }
+
     composeOptions {
         kotlinCompilerExtensionVersion compose_version
         kotlinCompilerVersion '1.5.21'
@@ -46,36 +50,60 @@ android {
 
 dependencies {
 
-    //  Kotlin
+    //region Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    //endregion
 
-    // Core
+    //region Core
     implementation "androidx.core:core-ktx:$core_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.activity:activity-ktx:$activity_version"
+    //endregion
 
-    // Compose dependencies
-    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$compose_version"
-    implementation "androidx.navigation:navigation-compose:$compose_version"
-    debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_tool_version"
-    implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_tool_version"
+    //region Compose
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.material:material:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+    //endregion
 
-    //Hilt
+    //region Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
     implementation "androidx.hilt:hilt-navigation-compose:$hilt_ext_version"
     kapt "androidx.hilt:hilt-compiler:$hilt_ext_version"
+    //endregion
 
-    //  Lifecycle Components
+    //region Retrofit
+    implementation("com.squareup.okhttp3:okhttp:$okhttp_version")
+    implementation("com.squareup.retrofit2:converter-moshi:$retrofit_version")
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
+    //endregion
+
+    //region Lifecycle Components
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
+    //endregion
 
-    //  Coroutines
+    //region navigation
+    implementation "androidx.navigation:navigation-compose:$navigation_version"
+    //endregion
+
+    //region Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    //endregion
 
-    // Test
+    //region coil
+    implementation("io.coil-kt:coil-compose:$coil_composer_version")
+    //endregion
+
+    //region Test
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$extjunit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressocore_version"
+    //endregion
 }

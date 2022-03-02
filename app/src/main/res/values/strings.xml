@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Jahez Challenge</string>
+    <string name="problem_occurred">A problem occurred</string>
+    <string name="something_went_wrong">Something went wrong.</string>
+    <string name="ok">Ok</string>
 </resources>
