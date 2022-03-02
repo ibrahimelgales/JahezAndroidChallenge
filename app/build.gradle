@@ -101,6 +101,14 @@ dependencies {
     implementation("io.coil-kt:coil-compose:$coil_composer_version")
     //endregion
 
+    //region room
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    kapt("androidx.room:room-compiler:$room_version") // To use Kotlin annotation processing tool (kapt)
+    implementation("androidx.room:room-ktx:$room_version") //Kotlin Extensions and Coroutines support for Room
+    testImplementation("androidx.room:room-testing:$room_version")
+    //endregion
+
     //region Test
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$extjunit_version"
