@@ -1,4 +1,4 @@
-package net.jahez.jahezchallenge.core
+package net.jahez.jahezchallenge.core.utils
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

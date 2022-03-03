@@ -1,8 +1,7 @@
 package net.jahez.jahezchallenge.domain.usecase
 
-import net.jahez.jahezchallenge.core.AppException
-import net.jahez.jahezchallenge.core.Resource
-import net.jahez.jahezchallenge.domain.model.RestaurantItem
+import net.jahez.jahezchallenge.core.utils.AppException
+import net.jahez.jahezchallenge.core.utils.Resource
 import net.jahez.jahezchallenge.domain.repository.IRepositoryRestaurants
 import javax.inject.Inject
 

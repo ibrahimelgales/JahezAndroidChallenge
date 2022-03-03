@@ -1,4 +1,4 @@
-package net.jahez.jahezchallenge.core
+package net.jahez.jahezchallenge.core.utils
 
 import retrofit2.HttpException
 import java.io.IOException

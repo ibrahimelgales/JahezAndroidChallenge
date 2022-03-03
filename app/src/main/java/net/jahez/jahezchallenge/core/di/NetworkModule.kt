@@ -1,13 +1,11 @@
-package net.jahez.jahezchallenge.data.network
+package net.jahez.jahezchallenge.core.di
 
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import net.jahez.jahezchallenge.BuildConfig
-import net.jahez.jahezchallenge.data.ImpRepositoryRestaurants
 import net.jahez.jahezchallenge.data.network.service.ApiService
-import net.jahez.jahezchallenge.domain.repository.IRepositoryRestaurants
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -74,10 +72,4 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
-
-    @Singleton
-    @Provides
-    internal fun provideRepository(apiService: ApiService): IRepositoryRestaurants{
-        return ImpRepositoryRestaurants(apiService)
-    }
 }

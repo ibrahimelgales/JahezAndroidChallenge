@@ -1,4 +1,4 @@
-package net.jahez.jahezchallenge.core
+package net.jahez.jahezchallenge.core.utils
 
 sealed class Resource<T>(val data: T? = null, val appException: AppException? = null) {
     class Success<T>(data: T) : Resource<T>(data)
