@@ -5,7 +5,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.runtime.Composable
@@ -30,7 +29,7 @@ internal fun RestaurantsListScreen(
     Scaffold(modifier = Modifier.fillMaxSize()) {
         when (val state = viewModel.stateUI.collectAsState().value) {
             is HomeViewModel.ViewState.Empty ->
-                EmptyRestaurantsComposable{
+                EmptyRestaurantsComposable {
                     viewModel.getAllRestaurants()
                 }
             is HomeViewModel.ViewState.Loading ->
@@ -78,7 +77,7 @@ private fun ProgressComposable() {
 }
 
 @Composable
-private fun EmptyRestaurantsComposable(onRefresh : () -> Unit) {
+private fun EmptyRestaurantsComposable(onRefresh: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
