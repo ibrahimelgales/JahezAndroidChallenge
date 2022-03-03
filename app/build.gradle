@@ -109,6 +109,10 @@ dependencies {
     testImplementation("androidx.room:room-testing:$room_version")
     //endregion
 
+    //region accompanist
+    implementation("com.google.accompanist:accompanist-insets:0.23.1")
+    //endregion
+
     //region Test
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$extjunit_version"

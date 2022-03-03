@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تطبيق جاهز</string>
+    <string name="problem_occurred">حدث خطأ</string>
+    <string name="something_went_wrong">لقد حدث خطأ ما.</string>
+    <string name="ok">موافق</string>
+    <string name="no_restaurants_found">لم يتم العثور علي مطاعم.</string>
+    <string name="change_language">تغيير اللغه للإنجليزية</string>
+</resources>

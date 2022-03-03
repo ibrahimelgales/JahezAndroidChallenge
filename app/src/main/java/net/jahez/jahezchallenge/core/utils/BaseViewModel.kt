@@ -14,7 +14,7 @@ abstract class BaseViewModel<ViewState : BaseViewState, ViewAction : BaseAction>
 
     // Delegate will handle state event deduplication
     // (multiple states of the same type holding the same data will not be dispatched multiple times to LiveData stream)
-    protected var state by Delegates.observable(initialState) { _, old, new ->
+    private var state by Delegates.observable(initialState) { _, _, new ->
         stateFlowData.value = new
     }
 

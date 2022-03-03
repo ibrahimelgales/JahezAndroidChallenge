@@ -1,4 +1,4 @@
-package net.jahez.jahezchallenge.presentation.composable_dialog
+package net.jahez.jahezchallenge.presentation.common_composable
 
 import android.util.Log
 import androidx.compose.material.AlertDialog

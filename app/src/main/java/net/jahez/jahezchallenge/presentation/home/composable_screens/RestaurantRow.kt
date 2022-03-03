@@ -1,4 +1,4 @@
-package net.jahez.jahezchallenge.presentation.composable_restaurants
+package net.jahez.jahezchallenge.presentation.home.composable_screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable

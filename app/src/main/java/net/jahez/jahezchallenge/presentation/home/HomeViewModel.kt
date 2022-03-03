@@ -1,4 +1,4 @@
-package net.jahez.jahezchallenge.presentation
+package net.jahez.jahezchallenge.presentation.home
 
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel

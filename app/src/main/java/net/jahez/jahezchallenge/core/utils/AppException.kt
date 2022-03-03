@@ -41,7 +41,6 @@ class AppException(
                 ExceptionType.UNKNOWN -> "UNKNOWN"
                 ExceptionType.HTTP -> "HTTP"
                 ExceptionType.NETWORK -> "No internet connection"
-                else -> ""
             }
         }
 
