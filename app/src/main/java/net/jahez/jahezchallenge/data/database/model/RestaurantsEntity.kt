@@ -15,12 +15,11 @@ internal data class RestaurantsEntity(
     val distance: String,
     val hasOffer: Boolean,
     val hours: String,
-    val id: Int,
+    @PrimaryKey val id: Int,
     val image: String,
     val name: String,
     val offer: String?,
     val rating: String,
-    @PrimaryKey(autoGenerate = true) val primaryKey: Int = 0
 )
 
 internal class RestaurantEntityTypeConverter {

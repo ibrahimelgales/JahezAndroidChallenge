@@ -5,4 +5,9 @@
     <string name="ok">OK</string>
     <string name="no_restaurants_found">No restaurants found!</string>
     <string name="change_language">Change language to arabic</string>
+    <string name="filter_by">Filter by</string>
+    <string name="has_offer">Has offer</string>
+    <string name="nearby_restaurants">Nearby restaurants</string>
+    <string name="highest_rating">Highest rating</string>
+    <string name="apply_filter">Apply filter</string>
 </resources>

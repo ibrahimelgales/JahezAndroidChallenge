@@ -4,6 +4,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import net.jahez.jahezchallenge.core.utils.*
+import net.jahez.jahezchallenge.domain.model.RestaurantFilterParams
 import net.jahez.jahezchallenge.domain.model.RestaurantItem
 import net.jahez.jahezchallenge.domain.usecase.UseCaseGetAllRestaurants
 import javax.inject.Inject
@@ -12,6 +13,10 @@ import javax.inject.Inject
 internal class HomeViewModel @Inject constructor(
     private val useCaseGetAllRestaurants: UseCaseGetAllRestaurants
 ) : BaseViewModel<HomeViewModel.ViewState, HomeViewModel.Action>(ViewState.Empty) {
+
+    //region var
+    private var restaurantFilterParams = RestaurantFilterParams()
+    //endregion
 
     init {
         getAllRestaurants()
@@ -36,7 +41,7 @@ internal class HomeViewModel @Inject constructor(
     internal fun getAllRestaurants() {
         viewModelScope.launch {
             sendAction(Action.AllRestaurantsLoading)
-            when (val response = useCaseGetAllRestaurants.getAllRestaurants()) {
+            when (val response = useCaseGetAllRestaurants.getAllRestaurants(restaurantFilterParams)) {
                 is Resource.Success -> {
                     val list = response.data
                     if (list != null && list.isNotEmpty())
@@ -50,6 +55,11 @@ internal class HomeViewModel @Inject constructor(
             }
 
         }
+    }
+
+    internal fun applyFilter(restaurantFilterParams: RestaurantFilterParams) {
+        this.restaurantFilterParams = restaurantFilterParams
+        getAllRestaurants()
     }
 
     override fun onReduceState(viewAction: Action) = when (viewAction) {

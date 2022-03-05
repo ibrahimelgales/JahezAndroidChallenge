@@ -6,4 +6,9 @@
     <string name="ok">موافق</string>
     <string name="no_restaurants_found">لم يتم العثور علي مطاعم.</string>
     <string name="change_language">تغيير اللغه للإنجليزية</string>
+    <string name="filter_by">تصفية حسب</string>
+    <string name="has_offer">لديه عروض</string>
+    <string name="nearby_restaurants">أقرب المطاعم</string>
+    <string name="highest_rating">أعلي تقييم</string>
+    <string name="apply_filter">تطبيق الفلتر</string>
 </resources>
