@@ -19,7 +19,7 @@ Technical Requirements:
 Bonuses:
 - [✓] Dependency Injection 
 - [✓] Offline Support (using `room`)
-- [ ] Unit Tests (at least one)
+- [✓] Unit Tests (at least one)
 - [✓] Jetpack Compose 
 
 Constraints:
