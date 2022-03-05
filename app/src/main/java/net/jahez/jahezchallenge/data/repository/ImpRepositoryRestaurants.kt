@@ -17,9 +17,10 @@ internal class ImpRepositoryRestaurants @Inject constructor(
 ) : IRepositoryRestaurants {
 
     override suspend fun getAllRestaurants(): List<RestaurantItem> = try {
-        apiService.getAllRestaurants().mapToDomain().also {
+        apiService.getAllRestaurants()?.mapToDomain()?.also {
             restaurantsDao.insertRestaurants(it.mapToEntity())
         }
+            ?: restaurantsDao.getAllRestaurants().mapToDomain()
     } catch (e: Exception) {
         restaurantsDao.getAllRestaurants().mapToDomain()
     }

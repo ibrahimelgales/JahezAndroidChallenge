@@ -114,8 +114,10 @@ dependencies {
     //endregion
 
     //region Test
-    testImplementation "junit:junit:$junit_version"
-    androidTestImplementation "androidx.test.ext:junit:$extjunit_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espressocore_version"
+    testImplementation 'io.mockk:mockk:1.12.3'
+    testImplementation 'org.amshove.kluent:kluent-android:1.68'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0' //For runBlockingTest, CoroutineDispatcher etc.
     //endregion
 }

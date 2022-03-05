@@ -6,6 +6,6 @@ import retrofit2.http.GET
 interface ApiService {
 
     @GET("restaurants.json")
-    suspend fun getAllRestaurants(): List<RestaurantItemResponse>
+    suspend fun getAllRestaurants(): List<RestaurantItemResponse>?
 
 }

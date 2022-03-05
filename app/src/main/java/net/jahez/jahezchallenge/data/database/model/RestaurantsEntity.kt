@@ -11,11 +11,11 @@ import com.squareup.moshi.Types
 @Entity(tableName = "restaurants")
 @TypeConverters(RestaurantEntityTypeConverter::class)
 internal data class RestaurantsEntity(
+    @PrimaryKey val id: Int,
     val description: String,
     val distance: String,
     val hasOffer: Boolean,
     val hours: String,
-    @PrimaryKey val id: Int,
     val image: String,
     val name: String,
     val offer: String?,

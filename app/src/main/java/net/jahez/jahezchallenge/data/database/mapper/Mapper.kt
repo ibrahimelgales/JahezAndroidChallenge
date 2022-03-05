@@ -12,7 +12,7 @@ internal fun RestaurantsEntity.mapToDomain() = RestaurantItem(
 internal fun List<RestaurantsEntity>.mapToDomain() = map { it.mapToDomain() }
 
 internal fun RestaurantItem.mapToEntity() = RestaurantsEntity(
-    description, distance, hasOffer, hours, id, image, name, offer, rating
+    id, description, distance, hasOffer, hours,  image, name, offer, rating
 )
 
 internal fun List<RestaurantItem>.mapToEntity() = map { it.mapToEntity() }
